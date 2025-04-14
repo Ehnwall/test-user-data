@@ -1,0 +1,22 @@
+{
+  "name": "@ehnwall/webgl-lib",
+  "version": "1.0.17",
+  "description": "A minimal webgl library in TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --loader ts-node/esm --test ./test/*.test.ts"
+  },
+  "author": "Dennis Ehnwall",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}
