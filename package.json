@@ -10,7 +10,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node --loader ts-node/esm --test ./test/*.test.ts"
+    "test": "node --loader ts-node/esm --test ./test/*.test.ts",
+    "start": "node --loader ts-node/esm  dist/index.js"
   },
   "author": "Dennis Ehnwall",
   "license": "MIT",
@@ -18,5 +19,8 @@
     "ts-node": "^10.9.2",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.7.0"
   }
 }

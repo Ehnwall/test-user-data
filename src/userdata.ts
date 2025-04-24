@@ -1,13 +1,14 @@
 // build attr here
-
-const maleFirstName = [
+export default class UserData{
+  static maleFirstName = [
     "Dennis",
     "Ruben",
     "Torvel"
 ]
 
-const femaleFirstName =[
+  static femaleFirstName =[
     "Kia",
     "Anna",
     "Henrietta"
 ]
+}

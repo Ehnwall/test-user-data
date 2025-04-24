@@ -1,2 +1,4 @@
-declare const maleFirstName: string[];
-declare const femaleFirstName: string[];
+export default class UserData {
+    static maleFirstName: string[];
+    static femaleFirstName: string[];
+}
