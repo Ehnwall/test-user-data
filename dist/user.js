@@ -1,12 +1,9 @@
 import UserData from "./UserData.js";
 export default class User {
-    firstName;
-    lastName;
-    age;
-    email;
-    city;
-    adress;
-    zip;
+    constructor() {
+        this.firstName = "";
+        this.lastName = "";
+    }
     static getNUsers(numb) {
         const list = [];
         for (let i = 0; i < numb; i++) {

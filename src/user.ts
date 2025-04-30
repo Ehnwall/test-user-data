@@ -1,8 +1,8 @@
 import UserData from "./UserData.js"
 
 export default class User{
-firstName?: string
-lastName?: string
+firstName: string = ""
+lastName: string = ""
 age?: number
 email?: string
 city?: string
