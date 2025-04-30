@@ -3,10 +3,10 @@ import UserData from "./UserData.js"
 export default class User{
 firstName?: string
 lastName?: string
+age?: number
 email?: string
 city?: string
 adress?: string
-age?: number
 
 public static getNUsers(numb: number): User[] {
     const list: User[] = [];
@@ -24,7 +24,9 @@ public static getNUsers(numb: number): User[] {
   
       // Slumpa efternamn
       const lastName = UserData.lastName[Math.floor(Math.random() * UserData.lastName.length)];
-  
+      // Slumpa ålder
+      const age = UserData.age[Math.floor(Math.random() * UserData.age.length)];
+      user.age = age;
       // Sätt förnamn, efternamn och fullständigt namn
       user.firstName = firstName;
       user.lastName = lastName;
@@ -32,7 +34,7 @@ public static getNUsers(numb: number): User[] {
       // Sätt e-postadress
       const emailDomain = UserData.emailDomain[Math.floor(Math.random() * UserData.emailDomain.length)];
       // if firstname contains å, ä, ö then replace with a, a, o
-    user.email = `${firstName.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o")}.${lastName.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o")}@${emailDomain}`;
+     user.email = `${firstName.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o")}.${lastName.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o")}@${emailDomain}`;
 
 
       list.push(user);
