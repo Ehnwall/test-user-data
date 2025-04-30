@@ -2,10 +2,11 @@ import UserData from "./UserData.js";
 export default class User {
     firstName;
     lastName;
+    age;
     email;
     city;
     adress;
-    age;
+    zip;
     static getNUsers(numb) {
         const list = [];
         for (let i = 0; i < numb; i++) {
@@ -28,6 +29,28 @@ export default class User {
             const emailDomain = UserData.emailDomain[Math.floor(Math.random() * UserData.emailDomain.length)];
             // if firstname contains å, ä, ö then replace with a, a, o
             user.email = `${firstName.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o")}.${lastName.toLowerCase().replace(/å/g, "a").replace(/ä/g, "a").replace(/ö/g, "o")}@${emailDomain}`;
+            // Välj en slumpmässig stad från städer-arrayen i swedishCities-objektet
+            const cities = UserData.swedishCities[0].städer; // Hämta städer-arrayen från det första objektet i swedishCities
+            const cityInfo = cities[Math.floor(Math.random() * cities.length)];
+            // Sätt stad, adress och postnummer från den valda staden
+            user.city = cityInfo.stad;
+            user.adress = cityInfo.adress;
+            user.zip = cityInfo.postnummer;
+            // Lägg till ett slumpmässigt gatunummer (1-100) till adressen
+            const streetNumber = Math.floor(Math.random() * 100) + 1;
+            // Extrahera gatunamnet och lägg till det slumpmässiga numret
+            const parts = cityInfo.adress.split(" ");
+            const lastPart = parts[parts.length - 1];
+            const isNumber = !isNaN(parseInt(lastPart));
+            if (isNumber) {
+                // Om adressen redan innehåller ett nummer, ersätt det
+                parts.pop();
+                user.adress = `${parts.join(" ")} ${streetNumber}`;
+            }
+            else {
+                // Annars lägg till numret
+                user.adress = `${cityInfo.adress} ${streetNumber}`;
+            }
             list.push(user);
         }
         return list;

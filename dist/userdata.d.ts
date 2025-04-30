@@ -4,4 +4,11 @@ export default class UserData {
     static femaleFirstName: string[];
     static lastName: string[];
     static emailDomain: string[];
+    static swedishCities: {
+        städer: {
+            stad: string;
+            postnummer: string;
+            adress: string;
+        }[];
+    }[];
 }
