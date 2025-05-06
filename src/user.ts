@@ -1,5 +1,5 @@
 import UserData from "./UserData.js"
-
+// exempel på Use-klassen
 export default class User{
 firstName: string = ""
 lastName: string = ""
@@ -8,7 +8,7 @@ email?: string
 city?: string
 adress?: string
 zip?: string
-
+// Statisk metod för att generera ett antal användare
 public static getNUsers(numb: number): User[] {
     const list: User[] = [];
   
