@@ -1,9 +1,11 @@
 import UserData from "./UserData.js";
+// exempel på Use-klassen
 export default class User {
     constructor() {
         this.firstName = "";
         this.lastName = "";
     }
+    // Statisk metod för att generera ett antal användare
     static getNUsers(numb) {
         const list = [];
         for (let i = 0; i < numb; i++) {

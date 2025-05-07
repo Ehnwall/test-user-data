@@ -1,6 +1,6 @@
 {
   "name": "swedish-test-users",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Generate realistic Swedish test user data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,8 +11,17 @@
     "test": "node dist/test.js"
   },
   "files": [
-    "dist"
-  ],
+  "dist/index.js",
+  "dist/index.d.ts",
+  "dist/generator.js",
+  "dist/generator.d.ts",
+  "dist/user.js",
+  "dist/user.d.ts",
+  "dist/UserData.js",
+  "dist/UserData.d.ts",
+  "dist/types.js",
+  "dist/types.d.ts"
+],
   "author": "Dennis Ehnwall",
   "license": "MIT",
   "devDependencies": {

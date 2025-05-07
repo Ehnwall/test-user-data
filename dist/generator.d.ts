@@ -1,35 +1,35 @@
 import User from './user.js';
 import { UserGenerationOptions } from './types.js';
 /**
- * Generate users with specified options
- * @param options Options to customize generated users
- * @returns Array of User objects
+ * Generera användare med angivna alternativ
+ * @param options Alternativ för att anpassa genererade användare
+ * @returns Array med User-objekt
  */
 export declare function generateUsers(options?: Partial<UserGenerationOptions>): Partial<User>[];
 /**
- * Generate male users with specified options
- * @param count Number of users to generate
- * @param options Additional options
- * @returns Array of User objects
+ * Generera manliga användare med angivna alternativ
+ * @param count Antal användare att generera
+ * @param options Ytterligare alternativ
+ * @returns Array med User-objekt
  */
 export declare function getMaleUsers(count: number, options?: Partial<UserGenerationOptions>): Partial<User>[];
 /**
- * Generate female users with specified options
- * @param count Number of users to generate
- * @param options Additional options
- * @returns Array of User objects
+ * Generera kvinnliga användare med angivna alternativ
+ * @param count Antal användare att generera
+ * @param options Ytterligare alternativ
+ * @returns Array med User-objekt
  */
 export declare function getFemaleUsers(count: number, options?: Partial<UserGenerationOptions>): Partial<User>[];
 /**
- * Generate users with addresses, including city and zip
- * @param count Number of users to generate
- * @param options Additional options
- * @returns Array of User objects
+ * Generera användare med adresser, inklusive stad och postnummer
+ * @param count Antal användare att generera
+ * @param options Ytterligare alternativ
+ * @returns Array med User-objekt
  */
 export declare function getUsersWithAddresses(count: number, options?: Partial<UserGenerationOptions>): Partial<User>[];
 /**
- * Generate users with only first and last names
- * @param count Number of users to generate
- * @returns Array of User objects with basic information
+ * Generera användare med endast för- och efternamn
+ * @param count Antal användare att generera
+ * @returns Array med User-objekt med grundläggande information
  */
 export declare function getBasicUsers(count: number): Partial<User>[];
